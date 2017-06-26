@@ -1,4 +1,6 @@
 # typescript-boilerplate
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/wix/typescript-boilerplate.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/wix/typescript-boilerplate.svg?branch=master)](https://travis-ci.org/wix/typescript-boilerplate)
 
 Generic project boilerplate for isomorphic TypeScript
