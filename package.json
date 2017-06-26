@@ -1,0 +1,60 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "0.0.1",
+  "description": "Generic project boilerplate for TypeScript",
+  "author": "Amir Arad (amira@wix.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wix/typescript-boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wix/typescript-boilerplate.git"
+  },
+  "files":["dist/src"],
+  "testGlob": "./dist/test/**/*.spec.js?(x)",
+  "homepage": "https://github.com/wix/typescript-boilerplate#readme",
+  "keywords": ["typescript", "tdd"],
+  "main": "dist/src/index.js",
+  "browser": "dist/src/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc -d",
+    "build:watch": "tsc -d -w",
+    "bundle": "webpack --progress",
+    "pretest": "npm run clean && npm run build && npm run bundle",
+    "reset": "rimraf ./node_modules ./dist && npm install && npm test",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "mocha --require dist/test/setup.js --require source-map-support/register --reporter mocha-env-reporter dist/test/*.spec.js",
+    "test:browser": "karma start --single-run",
+    "start": "npm run clean && npm run build && concurrently --kill-others --success first 'npm run build:watch' 'webpack-dev-server --no-info'"
+  },
+  "devDependencies": {
+    "@types/chai": "4.0.1",
+    "@types/mocha": "2.2.41",
+    "@types/sinon": "2.3.1",
+    "@types/sinon-chai": "2.7.28",
+    "chai": "3.5.0",
+    "chai-subset": "1.5.0",
+    "concurrently": "3.4.0",
+    "glob": "7.1.2",
+    "karma": "1.7.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-env-reporter": "1.0.13",
+    "karma-firefox-launcher": "1.0.1",
+    "karma-mocha": "1.3.0",
+    "mocha": "3.4.2",
+    "mocha-env-reporter": "2.0.4",
+    "mocha-loader": "1.1.1",
+    "rimraf": "2.6.1",
+    "sinon": "2.3.5",
+    "sinon-chai": "2.11.0",
+    "source-map-support": "0.4.15",
+    "typescript": "2.3.4",
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
+  },
+  "dependencies": {
+
+  }
+}
