@@ -34,9 +34,9 @@
     "@types/mocha": "2.2.41",
     "@types/sinon": "2.3.1",
     "@types/sinon-chai": "2.7.28",
-    "chai": "3.5.0",
+    "chai": "4.0.2",
     "chai-subset": "1.5.0",
-    "concurrently": "3.4.0",
+    "concurrently": "3.5.0",
     "glob": "7.1.2",
     "karma": "1.7.0",
     "karma-chrome-launcher": "2.2.0",
@@ -51,8 +51,8 @@
     "sinon-chai": "2.11.0",
     "source-map-support": "0.4.15",
     "typescript": "2.3.4",
-    "webpack": "1.14.0",
-    "webpack-dev-server": "1.16.2"
+    "webpack": "3.0.0",
+    "webpack-dev-server": "2.5.0"
   },
   "dependencies": {
 
