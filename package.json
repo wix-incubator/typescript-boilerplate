@@ -49,7 +49,11 @@
     "sinon-chai": "~2.11.0",
     "source-map-support": "~0.4.15",
     "typescript": "~2.4.1",
+    "tslib":"~1.7.1",
     "webpack": "~3.0.0",
     "webpack-dev-server": "~2.5.0"
+  },
+  "peerDependencies": {
+    "tslib":"~1.7.1"
   }
 }
