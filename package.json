@@ -50,7 +50,7 @@
     "source-map-support": "~0.4.15",
     "typescript": "~2.5.2",
     "tslib":"~1.7.1",
-    "webpack": "~3.5.1",
+    "webpack": "~3.6.0",
     "webpack-dev-server": "~2.7.0"
   },
   "peerDependencies": {
