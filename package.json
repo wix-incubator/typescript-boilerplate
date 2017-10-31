@@ -48,7 +48,7 @@
     "sinon": "~4.0.0",
     "sinon-chai": "~2.14.0",
     "source-map-support": "~0.5.0",
-    "typescript": "~2.5.2",
+    "typescript": "~2.6.1",
     "tslib":"~1.7.1",
     "webpack": "~3.7.0",
     "webpack-dev-server": "~2.9.0"
