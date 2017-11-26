@@ -53,6 +53,7 @@
     "webpack": "~3.7.0",
     "webpack-dev-server": "~2.9.0"
   },
+  
   "peerDependencies": {
     "tslib":"~1.7.1"
   }
