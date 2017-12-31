@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/chai": "~4.0.1",
     "@types/mocha": "~2.2.41",
-    "@types/sinon": "~4.0.0",
+    "@types/sinon": "~4.1.0",
     "@types/sinon-chai": "~2.7.28",
     "chai": "~4.1.0",
     "chai-subset": "~1.6.0",
