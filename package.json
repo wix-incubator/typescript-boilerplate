@@ -28,7 +28,7 @@
     "start": "rimraf dist && yarn build && concurrently --kill-others --success first \"yarn build -- -w\" \"webpack-dev-server --no-info\""
   },
   "devDependencies": {
-    "@types/chai": "~4.0.1",
+    "@types/chai": "~4.1.0",
     "@types/mocha": "~2.2.41",
     "@types/sinon": "~4.1.0",
     "@types/sinon-chai": "~2.7.28",
