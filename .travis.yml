@@ -1,23 +1,21 @@
+dist: trusty
+sudo: required
 language: node_js
 
-notifications:
-    slack: wixc3:xUUjwQ3EV68OhBqh6LRdngEr
-    
 node_js:
-  - "7"
-  - "6"
+  - "9"
+  - "8"
+
 os:
   - linux
 
-addons:
-  firefox: "latest"
 
-before_install: yarn global add greenkeeper-lockfile@1
+before_install:
+  - sudo sysctl fs.inotify.max_user_watches=524288
+  - yarn global add greenkeeper-lockfile@1
 
 before_script:
-  - greenkeeper-lockfile-update ;
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CHROME_BIN=chromium-browser ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
+  - greenkeeper-lockfile-update
 
-after_script: greenkeeper-lockfile-upload
+after_script:
+  - greenkeeper-lockfile-upload
