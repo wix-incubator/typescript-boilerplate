@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "lib": [
-      "es2015"
+      "es2015",
+      "dom"
     ],
     "module": "commonjs",
     "target": "es5",
@@ -9,6 +10,7 @@
     "importHelpers": true,
     "noImplicitReturns": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
     "typeRoots": [

@@ -1,6 +1,4 @@
-import * as chai from 'chai';
-import * as sinonChai from 'sinon-chai';
-import * as chaiSubset from 'chai-subset';
+import test = require('tape')
+import tapeworm = require('tape-worm');
 
-chai.use(sinonChai);
-chai.use(chaiSubset);
+tapeworm.infect(test);
