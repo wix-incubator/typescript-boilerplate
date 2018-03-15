@@ -22,7 +22,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "build": "rimraf dist && tsc -d",
-    "test": "run-s test:node test:browser | tap-colorize",
+    "test": "run-s test:node test:browser | tap-merge | tap-colorize",
     "test:node": "ts-node node_modules/tape/bin/tape \"test/**/*.spec.ts?(x)\"",
     "test:browser": "browserify test/*.spec.ts -p [ tsify ] | tape-run",
     "start": "budo test/setup.ts test/*.spec.ts -s=test.bundle --live -p 8080 -- --debug -p [ browserify-hmr ] -p [ tsify ]"
@@ -39,6 +39,7 @@
     "rimraf": "2.6.1",
     "sinon": "4.4.5",
     "tap-colorize": "1.2.0",
+    "tap-merge": "0.3.1",
     "tape": "4.9.0",
     "tape-run": "3.0.4",
     "tape-worm": "0.0.3",
