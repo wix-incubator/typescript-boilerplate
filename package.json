@@ -22,7 +22,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "build": "rimraf dist && tsc -d",
-    "test": "set -o pipefail && run-s test:node test:browser | tap-merge | tap-colorize",
+    "test": "run-s test:node test:browser",
     "test:node": "ts-node node_modules/tape/bin/tape \"test/**/*.spec.ts?(x)\"",
     "test:browser": "browserify test/*.spec.ts -p [ tsify ] | tape-run",
     "start": "budo test/setup.ts test/*.spec.ts -s=test.bundle --live -p 8080 -- --debug -p [ browserify-hmr ] -p [ tsify ]"
