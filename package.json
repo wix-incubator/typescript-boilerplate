@@ -1,67 +1,54 @@
 {
-  "name": "typescript-boilerplate",
+  "name": "typescript-boilerplate-app",
   "version": "0.0.1",
   "description": "Generic project boilerplate for TypeScript",
-  "author": "Amir Arad (amira@wix.com)",
+  "author": "Amir Arad (greenshade@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix/typescript-boilerplate/issues"
+    "url": "https://github.com/amir-arad/typescript-boilerplate-app/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wix/typescript-boilerplate.git"
+    "url": "git@github.com:amir-arad/typescript-boilerplate-app.git"
   },
   "files": [
     "dist/src"
   ],
-  "testGlob": "./dist/test/**/*.spec.js?(x)",
-  "homepage": "https://github.com/wix/typescript-boilerplate#readme",
+  "homepage": "https://github.com/amir-arad/typescript-boilerplate-app#readme",
   "keywords": [
     "typescript",
     "tdd"
   ],
   "main": "dist/src/index.js",
-  "browser": "dist/src/index.js",
   "scripts": {
-    "build": "tsc -d",
-    "bundle": "webpack --progress",
-    "reset": "rimraf node_modules dist && yarn install && yarn test",
-    "test": "run-s test:node test:browser:run",
-    "test:node": "mocha --require ts-node/register --require test/setup.ts --require source-map-support/register test/*.spec.ts",
-    "test:browser:run": "run-p -r start test:browser:run2",
-    "test:browser:run2": "run-s start:wait test:browser",
-    "test:browser": "cross-var mocha-headless-chrome $HL_CHROME_PARAMS -t 30000 -f http://localhost:8080/test.bundle",
-    "start": "tsc-watch --onFirstSuccess \"webpack-dev-server --no-info\"",
-    "start:wait": "wait-on -t 30000 http://localhost:8080/test.bundle"
+    "build": "rimraf dist && tsc -d",
+    "test": "run-s test:node test:browser",
+    "test:node": "ts-node node_modules/tape/bin/tape \"test/**/*.spec.ts?(x)\"",
+    "test:browser": "browserify test/*.spec.ts -p [ tsify ] | tape-run",
+    "start": "budo test/setup.ts test/*.spec.ts -s=test.bundle --live -p 8080 -- --debug -p [ browserify-hmr ] -p [ tsify ]"
   },
   "devDependencies": {
-    "@types/chai": "~4.1.2",
-    "@types/mocha": "~2.2.41",
-    "@types/sinon": "~4.3.0",
-    "@types/sinon-chai": "~2.7.28",
-    "chai": "~4.1.0",
-    "chai-subset": "~1.6.0",
-    "cross-var": "^1.1.0",
-    "glob": "~7.1.2",
-    "mocha": "~5.0.0",
-    "mocha-env-reporter": "~3.0.0",
-    "mocha-headless-chrome": "^1.8.2",
-    "mocha-loader": "~1.1.1",
-    "npm-run-all": "^4.1.2",
-    "rimraf": "~2.6.1",
-    "sinon": "~4.4.0",
-    "sinon-chai": "~3.0.0",
-    "source-map-support": "~0.5.0",
+    "@types/sinon": "4.3.0",
+    "@types/tape": "4.2.32",
+    "browserify": "16.1.1",
+    "browserify-hmr": "0.3.6",
+    "browserify-tape-spec": "1.1.3",
+    "budo": "11.2.0",
+    "cross-var": "1.1.0",
+    "npm-run-all": "4.1.2",
+    "rimraf": "2.6.1",
+    "sinon": "4.4.5",
+    "tap-colorize": "1.2.0",
+    "tap-merge": "0.3.1",
+    "tape": "4.9.0",
+    "tape-run": "3.0.4",
+    "tape-worm": "0.0.3",
     "ts-node": "^5.0.1",
-    "tsc-watch-2": "^0.0.1",
-    "tslib": "~1.9.0",
-    "typescript": "~2.7.2",
-    "wait-on": "^2.1.0",
-    "webpack": "~4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "~3.1.1"
+    "tsify": "3.0.4",
+    "typescript": "2.7.2",
+    "watchify": "3.11.0"
   },
-  "peerDependencies": {
-    "tslib": "~1.7.1"
+  "dependencies": {
+    "tslib": "~1.9.0"
   }
 }
