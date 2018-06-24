@@ -27,11 +27,11 @@
     "bundle": "webpack --progress",
     "reset": "rimraf node_modules dist && yarn install && yarn test",
     "test": "run-s test:node test:browser:run",
-    "test:node": "mocha --require ts-node/register --require test/setup.ts --require source-map-support/register test/*.spec.ts",
+    "test:node": "mocha --require ts-node/register/transpile-only --require test/setup.ts --require source-map-support/register test/*.spec.ts",
     "test:browser:run": "run-p -r start test:browser:run2",
     "test:browser:run2": "run-s start:wait test:browser",
     "test:browser": "cross-var mocha-headless-chrome $HL_CHROME_PARAMS -t 30000 -f http://localhost:8080/test.bundle",
-    "start": "tsc-watch --onFirstSuccess \"webpack-dev-server --no-info\" --preserveWatchOutput",
+    "start": "tsc-watch --onFirstSuccess \"webpack-dev-server --no-info\"",
     "start:wait": "wait-on -t 30000 http://localhost:8080/test.bundle"
   },
   "devDependencies": {
