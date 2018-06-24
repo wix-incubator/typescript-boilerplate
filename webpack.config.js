@@ -7,7 +7,7 @@ const distPath = path.join(__dirname, 'dist');
 
 const testsSetup = [path.join(__dirname, 'dist', 'test', 'setup.js')];
 module.exports = {
-    // mode: 'development',
+    mode: 'development',
     devtool: 'eval',
     entry: {
         test: testsSetup.concat(testFiles.map(fileName => `mocha-loader!${fileName}`))
