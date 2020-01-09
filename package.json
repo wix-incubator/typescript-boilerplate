@@ -46,7 +46,7 @@
     "mocha": "~5.2.0",
     "mocha-env-reporter": "~3.0.0",
     "mocha-headless-chrome": "^2.0.0",
-    "mocha-loader": "~1.1.1",
+    "mocha-loader": "~4.0.1",
     "npm-run-all": "^4.1.2",
     "rimraf": "~2.6.1",
     "sinon": "~6.0.1",
