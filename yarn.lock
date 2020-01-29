@@ -12,9 +12,10 @@
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.1.2.tgz#f1af664769cfb50af805431c407425ed619daa21"
 
-"@types/mocha@~5.2.0":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.1.tgz#465450aaf5cec6f7d35523748c6cc89a5e222dc5"
+"@types/mocha@~7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-7.0.1.tgz#5d7ec2a789a1f77c59b7ad071b9d50bf1abbfc9e"
+  integrity sha512-L/Nw/2e5KUaprNJoRA33oly+M8X8n0K+FwLTbYqwTcR14wdPWeRkigBLfSFpN/Asf9ENZTMZwLxjtjeYucAA4Q==
 
 "@types/sinon-chai@~3.2.0":
   version "3.2.0"
@@ -23,9 +24,14 @@
     "@types/chai" "*"
     "@types/sinon" "*"
 
-"@types/sinon@*", "@types/sinon@~4.3.0":
+"@types/sinon@*":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.3.0.tgz#7f53915994a00ccea24f4e0c24709822ed11a3b1"
+
+"@types/sinon@~5.0.1":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-5.0.7.tgz#0d9f89dd0c9988c4f1505a92a3a324ee7bdb18a6"
+  integrity sha512-opwMHufhUwkn/UUDk35LDbKJpA2VBsZT8WLU8NjayvRLGPxQkN+8XmfC2Xl35MAscBE8469koLLBjaI3XLEIww==
 
 "@webassemblyjs/ast@1.5.12":
   version "1.5.12"
@@ -5064,9 +5070,10 @@ sinon-chai@~3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-3.2.0.tgz#ed995e13a8a3cfccec18f218d9b767edc47e0715"
 
-sinon@~5.0.0:
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-5.0.10.tgz#a282b36a7475664c9f98719108e5546907129023"
+sinon@~6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-6.0.1.tgz#4247b97dd8fecbe1e19f8b816a5e7eed3993bcfe"
+  integrity sha512-rfszhNcfamK2+ofIPi9XqeH89pH7KGDcAtM+F9CsjHXOK3jzWG99vyhyD2V+r7s4IipmWcWUFYq4ftZ9/Eu2Wg==
   dependencies:
     "@sinonjs/formatio" "^2.0.0"
     diff "^3.5.0"
